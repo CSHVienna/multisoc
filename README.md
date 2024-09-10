@@ -2,7 +2,8 @@
 
 multisoc is a python package to simulate and analyze networks with multidimensional interactions. 
 
-The code also reproduces the results from our paper on multidimensional social interactions. Preprint available at https://arxiv.org/abs/2406.17043.
+The code also reproduces the results from the paper ***The hidden architecture of connections: How do multidimensional identities shape our social networks?***.  
+Preprint available at https://arxiv.org/abs/2406.17043.
 
 ## Installation
 
