@@ -72,7 +72,7 @@ G = multidimensional_network_fix_av_degree(
 ### Inference of multidimensional interactions 
 
 In this example, we infer the one-dimensional preferences and the aggregation function, given a dummy dataset that contains three attributes: number, color and shape.  
-In particular, we print the value of AIC for the model that uses the AND aggregation function
+In particular, we print the value of AIC for the model that uses the AND aggregation function.
 
 ```python
 from multisoc.infer import data_loader
