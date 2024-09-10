@@ -72,7 +72,7 @@ G = multidimensional_network_fix_av_degree(
 
 ### Inference of multidimensional interactions 
 
-In this example, we infer the one-dimensional preferences and the aggregation function, given a dummy dataset that contains three attributes: number, color and shape.  
+In this example, we infer the one-dimensional preferences and the aggregation function, given a dummy dataset that contains three attributes: number, color and shape. After the code, you can see how the input data is structured.  
 In particular, we print the value of AIC for the model that uses the AND aggregation function.
 
 ```python
@@ -108,3 +108,26 @@ results_1d_dct = wrappers.infer_latent_preferences_1dSimple(
 # Print the AIC
 print(results_1d_dct['AIC'])
 ```
+
+The `nodes_dummy.csv` file contains the information related to the nodes' attributes.  
+Each row contains the index of the node, and the corresponding attributes.
+
+|   index | shape   | color   |   number |
+|--------:|:--------|:--------|---------:|
+|       0 | Square  | Blue    |        3 |
+|       1 | Circle  | Blue    |        3 |
+|       2 | Square  | Red     |        5 |
+|       3 | Square  | Blue    |        3 |
+|       4 | Square  | Red     |        1 |
+
+
+The `edges_dummy.csv` file contains the information related to the connection among the individuals.  
+Each row contains one edge, with the corresponding source and target nodes.
+
+|    |   source |   target |
+|---:|---------:|---------:|
+|  0 |        0 |        1 |
+|  1 |        0 |       23 |
+|  2 |        0 |       41 |
+|  3 |        0 |       63 |
+|  4 |        0 |      103 |
