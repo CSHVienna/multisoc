@@ -77,7 +77,6 @@ In particular, we print the value of AIC for the model that uses the AND aggrega
 ```python
 from multisoc.infer import data_loader
 from multisoc.infer import wrappers
-from multisoc.infer import MRQAP
 import pandas as pd
 
 # Load the data
