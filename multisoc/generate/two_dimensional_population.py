@@ -67,7 +67,7 @@ def consol_comp_pop_frac_tnsr(pop_fracs_lst,consol):
     return consol * comp_pop_frac_tnsr_MC + (1.0-consol) * comp_pop_frac_tnsr_AC
 
 
-def relative_correlation(f2m: float,corr: float): -> float
+def relative_correlation(f2m: float,corr: float) -> float:
     """Compute relative correlation parameter
     
     Computes relative correlation parameter in interval [-1,1] with neutral
@@ -90,7 +90,7 @@ def relative_correlation(f2m: float,corr: float): -> float
     assert 0 <= corr <= 1
     return (corr-f2m)/(1-f2m) if corr>f2m else (corr-f2m)/f2m
 
-def relative_correlation_inv(f2m: float,rel_corr: float): -> float
+def relative_correlation_inv(f2m: float,rel_corr: float) -> float:
     """Compute original correlation parameter from relative
     
     Computes the original correlation parameter in interval [0,1] with neutral
