@@ -1,4 +1,5 @@
 import itertools
+import copy
 import numpy as np
 
 def make_composite_index(g_vec):
@@ -23,3 +24,9 @@ def get_num_multi_groups(g_vec):
     for g in g_vec:
         G *= g
     return G
+
+def G_attr_to_str(G,attr):
+    G_out = copy.deepcopy(G)
+    for n in G_out.nodes():
+        G_out.nodes[n][attr] = str(G_out.nodes[n][attr])
+    return G_out
