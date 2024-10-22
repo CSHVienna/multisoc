@@ -1,3 +1,6 @@
+import numpy as np
+from scipy.stats import skellam
+
 from multisoc.generate.utils import make_composite_index
 from multisoc.generate.utils import comp_index_to_integer
 
