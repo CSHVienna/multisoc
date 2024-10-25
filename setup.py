@@ -19,7 +19,7 @@ authors = {
 
 setuptools.setup(
     name="multisoc",
-    version="0.1.0",
+    version="0.1.1",
     author=authors["Martin-Gutierrez"][0],
     author_email=authors["Martin-Gutierrez"][1],
     description=("A package to simulate and analyze networks with multidimensional interactions."),
