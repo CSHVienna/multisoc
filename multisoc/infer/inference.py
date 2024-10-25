@@ -43,8 +43,8 @@ def estimate_H(population,link_count,type_p='multidimensional',opt_method = 'L-B
     num_nans = p.isna().sum().sum()
     p.fillna(0,inplace=True) # It doesn't influence the likelihood
 
-    att_pop = [population.groupby(level=i, axis=1, sort=False).sum() for i in range(n_attributes)]
-    att_counts = [link_count.groupby(level=i, axis=1, sort=False).sum().groupby(level=i, axis=0, sort=False).sum() for i in range(n_attributes)]
+    att_pop = [population.T.groupby(level=i, sort=False).sum().T for i in range(n_attributes)]
+    att_counts = [link_count.T.groupby(level=i, sort=False).sum().T.groupby(level=i, sort=False).sum() for i in range(n_attributes)]
     att_p = [att_counts[i].div(aux_functions.get_NN(att_pop[i])) for i in range(n_attributes)]
     for t in att_p: t.fillna(0,inplace=True) # It doesn't influence the likelihood
 
@@ -112,8 +112,8 @@ def estimate_H(population,link_count,type_p='multidimensional',opt_method = 'L-B
     elif type_p[:8]=='and_dim_':
         minus_ind = type_p.rfind('-')
         dims = [int(type_p[8:minus_ind])-1,int(type_p[minus_ind+1:])-1]
-        restricted_pop = population.groupby(level=dims, axis=1, sort=False).sum()
-        restricted_counts = link_count.groupby(level=dims, axis=1, sort=False).sum().groupby(level=dims, axis=0, sort=False).sum()
+        restricted_pop = population.T.groupby(level=dims, sort=False).sum().T
+        restricted_counts = link_count.T.groupby(level=dims, sort=False).sum().T.groupby(level=dims, sort=False).sum()
         restricted_p = restricted_counts.div(aux_functions.get_NN(restricted_pop))
         restricted_p.fillna(0,inplace=True) # It doesn't influence the likelihood
         x_0 = restricted_p.values.reshape(np.prod(restricted_counts.shape))
