@@ -47,7 +47,7 @@ pop_fracs_lst = [
 ]
 
 ## Generate population distribution with certain level of correlation between the two attributes
-## No correlation would correspond to the fraction of the largest minority
+## No correlation would correspond to the group fraction of the largest minority (0.4 in this case)
 consol = 0.4 ## Level of correlation
 comp_pop_frac_tnsr = consol_comp_pop_frac_tnsr(pop_fracs_lst,consol)
 
