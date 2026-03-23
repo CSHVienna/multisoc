@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="logo.png" alt="Package Logo" width="100" style="vertical-align: middle; margin-right: 10px;"/>
+  <img src="logo3.png" alt="Package Logo" width="200" style="vertical-align: middle; margin-right: 10px;"/>
 </p>
 
 # multisoc
