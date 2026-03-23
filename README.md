@@ -1,9 +1,34 @@
+<p align="left">
+  <img src="logo.png" alt="Package Logo" width="100" style="vertical-align: middle; margin-right: 10px;"/>
+</p>
+
 # multisoc
+[![MAI_BIAS toolkit](https://img.shields.io/badge/MAI_BIAS-⚖️_AI_fairness_tool-white)](https://mammoth-eu.github.io/mammoth-commons/index.html)[![Integration tests](https://github.com/mammoth-eu/mammoth-commons/actions/workflows/integration.yml/badge.svg)](https://github.com/mammoth-eu/mammoth-commons/actions/workflows/integration.yml)
+![Coverage](./coverage-badge.svg)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+[![Downloads](https://static.pepy.tech/badge/mai-bias)](https://pepy.tech/projects/mai-bias)
+[![PyPI](https://img.shields.io/pypi/v/hyperfair)](https://pypi.org/project/hyperfair/)
+[![License](https://img.shields.io/github/license/CSHVienna/hyper_fair)](https://github.com/CSHVienna/hyper_fair/blob/main/LICENSE)
 
-multisoc is a python package to simulate and analyze networks with multidimensional interactions. 
+Multisoc is a Python package for simulating and analyzing networks with multidimensional interactions. Our multidimensional network model is based on aggregating latent connection preferences that depend on the attributes of the source node and the potential connection target. Although we have focused on evaluating aggregation mechanisms for these preferences, as a preliminary step, we need to consider how preferences may depend on attributes. 
 
-The code also reproduces the results from the paper ***The hidden architecture of connections: How do multidimensional identities shape our social networks?***.  
-Preprint available at https://arxiv.org/abs/2406.17043.
+
+The code also reproduces the results from the papers **A simple preference aggregation rule explains how multidimensional identities shape social networks** published in *Communication Physics* (available [here](https://www.nature.com/articles/s42005-026-02537-3)) and **Intersectional inequalities in social ties** published in *Science Advances* (available [here](https://www.science.org/doi/full/10.1126/sciadv.adu9025)).
+
+
+This software is part of MAI-BIAS; a low-code toolkit for fairness analysis and mitigation, with an accompanying suite of coding tools. Our ecosystem operates in multidimensional, multi-attribute settings and across multiple data modalities (such as tabular data, images, text, and graphs). Learn more [**here**](https://mammoth-eu.github.io/mammoth-commons/index.html).
+
+## 👥 Who is this for?
+- **ML engineers and data scientists** building or evaluating network models in Python.
+- **Researchers** studying multi-attribute connectivities in networks.
+- **Policymakers and analysts** who want reproducible evidence for decision‑making. Consider exploring our user-friendly/no-code visualization tool to understand how multisoc works [**here**]([https://vis.csh.ac.at/ranks-of-disparity/index.html](https://vis.csh.ac.at/planets-of-disparity-two/)).
+
+## ✨ About
+**multisoc** is a principled theoretical framework to model multidimensional social interactions. Using Bayesian model selection, **multisoc** compares competing preference aggregation mechanisms in two empirical systems (high-school friendship networks and
+marriages) and finds that a simple latent preference model outperforms more complex alternatives: people evaluate each identity dimension independently and form ties mainly when all evaluations are favorable. **multisoc** yields interpretable preference estimates and principled measures of dimension salience, providing a practical tool for analyzing social choices and identifying which aspects of identity matter most for tie formation. **multisoc** reveals how social structures emerge from intersecting identities, with broad implications for understanding social cohesion and addressing intersectional inequalities in networks.
+
+## 🚀 Highlights
+- ⚖️ Multivalue and multi-attribute network analyses
 
 ## Installation
 
@@ -131,3 +156,28 @@ Each row contains one edge, with the corresponding source and target nodes.
 |  2 |        0 |       41 |
 |  3 |        0 |       63 |
 |  4 |        0 |      103 |
+
+## 📜 Attributions
+```bibtex
+@article{martin2026simple,
+  title={A simple preference aggregation rule explains how multidimensional identities shape social networks},
+  author={Martin-Gutierrez, Samuel and Cartier van Dissel, Mauritz N and Karimi, Fariba},
+  journal={Communications Physics},
+  year={2026},
+  publisher={Nature Publishing Group UK London}
+}
+@article{martin2025intersectional,
+  title={Intersectional inequalities in social ties},
+  author={Martin-Gutierrez, Samuel and Cartier van Dissel, Mauritz N and Karimi, Fariba},
+  journal={Science Advances},
+  volume={11},
+  number={45},
+  pages={eadu9025},
+  year={2025},
+  publisher={American Association for the Advancement of Science}
+}
+```
+- **Project:** [MAMMOth](https://mammoth-ai.eu/)
+- **Maintainer:** Samuel Martin-Gutierrez (martin.gutierrez.samuel@gmail.com)
+- **License:** Apache 2.0
+- **Contributors:** Mauritz Cartier van Dissel
